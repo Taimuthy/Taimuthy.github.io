@@ -52,7 +52,7 @@ header nav{
 }
 
 a:hover{
-    color: black;
+    color: gray;
 } 
 
 header .highlight, header .current a{
