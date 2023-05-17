@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS for the bouncing text */
+    .trampoline-text {
+      position: relative;
+      font-size: 5em;
+      text-align: center;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); color: red; }
+      50% { transform: translateY(-50px); color: blue; }
+    }
+  </style>
+</head>
+<body>
+  <div class="trampoline-text">Hello</div>
+
+  <script>
+    // JavaScript to create multiple instances of bouncing text
+    const textElement = document.querySelector('.trampoline-text');
+    const numInstances = 10;
+
+    for (let i = 0; i < numInstances; i++) {
+      const newText = textElement.cloneNode(true);
+      document.body.appendChild(newText);
+    }
+  </script>
+</body>
+</html>
